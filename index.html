@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <form id="task-form">
+        <input type="text" id="new-task-title" placeholder="Nueva Tarea" required>
+        <button type="submit">Agregar</button>
+        <button type="button" id="clear-tasks">Limpiar Tareas</button>
+    </form>
+    <div id="notification"></div>
+    <div class="task-sections">
+        <div class="task-section">
+            <h2>No Completadas</h2>
+            <ul id="not-completed-tasks"></ul>
+        </div>
+        <div class="task-section">
+            <h2>Completadas</h2>
+            <ul id="completed-tasks"></ul>
+        </div>
+    </div>
+</body>
+</html>
