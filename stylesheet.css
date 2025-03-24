@@ -21,15 +21,39 @@ h1 {
 .task-section {
     flex: 1;
     margin: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .task-section h2 {
     text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 10px 0;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+ul::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #f0f0f0;
 }
 
 li {
@@ -62,10 +86,19 @@ button {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    width: auto;
 }
 
 button:hover {
     background-color: #11f811;
+}
+
+button.delete {
+    background-color: #ff4d4d;
+}
+
+button.delete:hover {
+    background-color: #ff1a1a;
 }
 
 #notification {
@@ -89,9 +122,10 @@ button:hover {
     background-color: #ff4d4d;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    width: auto;
 }
 
 #clear-tasks:hover {
@@ -103,4 +137,22 @@ button:hover {
     border: 1px solid black;
     border-radius: 5px;
     margin-top: 20px;
+}
+
+.clear-list {
+    display: none;
+    margin-top: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: auto;
+    align-self: center;
+}
+
+.clear-list:hover {
+    background-color: #ff1a1a;
 }
